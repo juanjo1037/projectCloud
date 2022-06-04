@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: project-cloud
+  datasource:
+    driver-class-name: org.h2.Driver
+    username: jooindiviabhiy
+    password: 184ed6bcc2cc056b138bcf5e556f1d23d4cdab3b2d70df7229ac7b79f09f8623
+    url: postgres://jooindiviabhiy:184ed6bcc2cc056b138bcf5e556f1d23d4cdab3b2d70df7229ac7b79f09f8623@ec2-34-198-186-145.compute-1.amazonaws.com:5432/d8qod5kcirq80l
+  h2:
+    console:
+      enabled: true
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL10Dialect
+    show-sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create-drop
+server:
+  servlet:
+    context-path: /project_cloud/v1
+  port: 9050
